@@ -33,7 +33,7 @@ function App() {
   return (
     <div className="App">
       <Container>
-        {alertStatus&& <Alert timer={timer} msg={message} />}
+        {alertStatus && <Alert msg={message} animation={alertStatus ? "show-alert": "hide-alert"}/>}
         <Form getData={dataHandler} />
         {users && users.map((user, index) => <UserCard key={index} name={user.name} age={user.age}/>)}
       </Container>
